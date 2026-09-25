@@ -1,4 +1,3 @@
-
 import streamlit as st
 from groq import Groq
 
@@ -68,7 +67,6 @@ if st.button("✨ Generate LinkedIn Post"):
     else:
 
         try:
-
             client = Groq(
                 api_key=st.secrets["GROQ_API_KEY"]
             )
@@ -134,7 +132,8 @@ LinkedIn posts that sound natural and human.
                     }
                 ]
             )
-             post = response.choices[0].message.content
+
+            post = response.choices[0].message.content
 
             st.subheader("Generated LinkedIn Post")
 
