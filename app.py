@@ -136,9 +136,8 @@ LinkedIn posts that sound natural and human.
             )
 
             post = response.choices[0].message.content
-
-           st.subheader("Generated LinkedIn Post")
-
+            
+            st.subheader("Generated LinkedIn Post")
 st.text_area(
     "Your LinkedIn post:",
     value=post,
