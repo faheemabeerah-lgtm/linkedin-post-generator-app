@@ -137,9 +137,20 @@ LinkedIn posts that sound natural and human.
 
             post = response.choices[0].message.content
 
-            st.subheader("Generated LinkedIn Post")
+           st.subheader("Generated LinkedIn Post")
 
-            st.write(post)
+st.text_area(
+    "Your LinkedIn post:",
+    value=post,
+    height=400
+)
+
+st.download_button(
+    label="📋 Copy/Download Post",
+    data=post,
+    file_name="linkedin_post.txt",
+    mime="text/plain"
+)
 
         except Exception as e:
             st.error(f"Something went wrong: {e}")
